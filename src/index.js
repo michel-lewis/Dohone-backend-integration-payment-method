@@ -13,6 +13,7 @@ app.use(bodyparser.json());
 
 //Routes
 app.use('/payment', paymentRoutes);
+app.use('/pay', paymentRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

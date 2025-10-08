@@ -8,8 +8,9 @@ class DohoneApiServices {
         try {
           // Récupère automatiquement un token valide
           const token = await authService.getAccessToken();
-          
+          console.log('token get there ', token)
           const response = await fetch(`${baseUrl}${endpoint}`, {
+            method: options.method || (data ? 'POST' : 'GET'),
             headers: {
               'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json',
