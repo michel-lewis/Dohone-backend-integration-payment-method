@@ -90,6 +90,7 @@
     "side-channel-weakmap": "^1.0.2",
     "sqlstring": "^2.3.3",
     "statuses": "^2.0.2",
+    "swagger-ui-express": "^5.0.1",
     "toidentifier": "^1.0.1",
     "toposort-class": "^1.0.1",
     "type-is": "^2.0.1",
@@ -104,6 +105,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
+    "docs": "node swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -120,5 +122,8 @@
   "bugs": {
     "url": "https://github.com/michel-lewis/Dohone-backend-integration-payment-method/issues"
   },
-  "homepage": "https://github.com/michel-lewis/Dohone-backend-integration-payment-method#readme"
+  "homepage": "https://github.com/michel-lewis/Dohone-backend-integration-payment-method#readme",
+  "devDependencies": {
+    "swagger-autogen": "^2.23.7"
+  }
 }

@@ -1,0 +1,177 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Dohone Integration API",
+    "description": "API pour l'intégration des paiements Dohone",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/payment/send": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "intent": {
+                  "example": "any"
+                },
+                "createtime": {
+                  "example": "any"
+                },
+                "walletsource": {
+                  "example": "any"
+                },
+                "issuertrxref": {
+                  "example": "any"
+                },
+                "tomember": {
+                  "example": "any"
+                },
+                "fromember": {
+                  "example": "any"
+                },
+                "vouchercode": {
+                  "example": "any"
+                },
+                "billInquiryData": {
+                  "example": "any"
+                },
+                "amount": {
+                  "example": "any"
+                },
+                "currency": {
+                  "example": "any"
+                },
+                "billList": {
+                  "example": "any"
+                },
+                "notifyUrl": {
+                  "example": "any"
+                },
+                "acquirertrxref": {
+                  "example": "any"
+                },
+                "asynchrone": {
+                  "example": "any"
+                },
+                "logo": {
+                  "example": "any"
+                },
+                "walletdestination": {
+                  "example": "any"
+                },
+                "receivercustomerdata": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/pay/{acquirertrxref}/{operatorID}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "acquirertrxref",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "operatorID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "cancelPage",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "endPage",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "wallet",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/pay/{acquirertrxref}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "acquirertrxref",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "cancelPage",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "endPage",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "wallet",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
